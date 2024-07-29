@@ -1,0 +1,108 @@
+---
+import NextJS from "./icons/Nextjs.astro"
+import Express from "./icons/Express.astro"
+import React from "./icons/React.astro"
+import HTML from "./icons/HTML.astro"
+import CSS from "./icons/CSS.astro"
+import Redux from "./icons/Redux.astro"
+import Tailwind from "./icons/Tailwind.astro"
+const TAGS ={
+    NEXT:{
+        name: "Next.js",
+        class: "bg-black text-white",
+        icon: NextJS
+    },
+    REACT:{
+        name: "React.js",
+        class: "bg-black text-white",
+        icon: React
+    },
+    EXPRESS:{
+        name: "Express",
+        class: "bg-black text-white",
+        icon: Express
+    },
+    HTML:{
+        name: "HTML",
+        class: "bg-black text-white",
+        icon: HTML
+    },
+    CSS:{
+        name: "CSS",
+        class: "bg-black text-white",
+        icon: CSS
+    },
+    REDUX:{
+        name: "Redux",
+        class: "bg-black text-white",
+        icon: Redux
+    },
+    TAILWIND:{
+        name: "tailwind",
+        class: "bg-black text-white",
+        icon: Tailwind
+    },
+}
+
+
+const PROJECTS = [
+    {
+        title: "Movies app",
+        description: "Movies app developed in React, using express for the backend",
+        link: "https://frabjous-pastelito-9e6b9f.netlify.app/",
+        github: "https://github.com/JuanF-Cano/cinema-app",
+        image:"images/movies.webp",
+        tags: [TAGS.REACT, TAGS.EXPRESS, TAGS.CSS,],
+    },
+    {
+        title: "Memory Game",
+        description: "completely functional Memory Game, made with HTML and CSS",
+        link: "#",
+        github: "https://github.com/yeisonbetancur/Memorama-en-CSS",
+        image: "images/memory.webp",
+        tags: [TAGS.HTML, TAGS.CSS]
+
+    },
+    {
+        title: "News App",
+        description: "News app developed in React, using axios to consume the APIs",
+        link: "https://bootcamp-news.netlify.app/",
+        github: "https://github.com/Gurottesque/News-App",
+        image: "images/news.webp",
+        tags: [TAGS.REACT, TAGS.CSS, TAGS.TAILWIND, TAGS.REDUX]
+
+    }
+]
+---
+
+{
+    PROJECTS.map(({ image, title, description, github, link, tags})=>(
+    <div class="flex justify-center flex-col items-center m-10">
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-2xl shadow-white/20 dark:bg-gray-800 dark:border-gray-700 ">
+        <a href={link}>
+            <img class="rounded-t-lg" src={image} alt="image" />
+        </a>
+        <div class="p-5">
+            <a href={link}>
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>
+        <a href={github} target="_blank" class="inline-flex font-medium items-center text-blue-600 hover:underline">
+            Visit the Github repository
+            <svg class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"/>
+            </svg>
+        </a>
+        <h1 class="text-black">Made with:</h1>
+        <ul class="text-black flex gap-4">
+            {tags.map((tag) => (
+                <li >
+                  <tag.icon class="size-6 inline mr-2" /> {tag.name}
+                    </li>
+            ))}
+        </ul>
+    </div>
+</div>
+</div>
+))
+}

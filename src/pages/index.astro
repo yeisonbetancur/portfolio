@@ -6,13 +6,17 @@ import Github from "../components/icons/Github.astro";
 import Linkedin from "../components/icons/Linkedin.astro";
 import SocialPill from "../components/SocialPill.astro";
 import Mail from '../components/icons/Mail.astro'
+import ProyectCard from "../components/ProyectCard.astro";
+import Code from "../components/icons/Code.astro";
+import Header from "../components/Header.astro";
 ---
 
 <Layout title="Portafolio de Yeison - Programador y Desarrollador fullstack">
   <main>
-    <section class="w-90 mx-auto lg:w-[740px] sm:w-[400px] py-44 text-white opacity-90">
+    <Header />
+    <section class="min-w-40 mx-auto  lg:w-[740px] sm:w-[400px] py-44 text-white opacity-90 justify-center">
       <h1 class="text-5xl font-bold flex justify-center flex-row gap-x-4 pb-4">
-        hey, soy yeison
+        Hey, soy Yeison
         <div class="flex justify-center items-center">
           <Badge>disponible</Badge>
         </div>
@@ -21,7 +25,7 @@ import Mail from '../components/icons/Mail.astro'
         <span class="text-blue-200/90">Desarrollador Fullstack</span> y Estudiante
         de Ingenieria, de
         <span class="text-yellow-100/90">Colombia.</span>
-        Especializado en crear aplicaciones ideales
+        Especializado en crear aplicaciones geniales
       </h2>
 
       <ul class="flex gap-x-2 flex-col w-80 md:w-auto md:flex-row">
@@ -35,9 +39,15 @@ import Mail from '../components/icons/Mail.astro'
         </SocialPill>
         <SocialPill>
           <a target="_blank" href=mailto:"yeisonbetancur01234@gmail.com">
-			<Mail class="w-6 h-6 inline" /> yeisonbetancur01234@gmail.com</a>
+			<Mail class="w-6 h-6 inline " /> yeisonbetancur01234@gmail.com</a>
         </SocialPill>
-      </ul>
+      </ul> 
+      <section class="mt-14">
+        <h2>About Me</h2>
+        <p class="mt-3">Soy un desarrollador de software con una sólida trayectoria en el diseño y desarrollo de diversas aplicaciones web. Soy un firme defensor del trabajo en equipo, creyendo que la colaboración y la comunicación efectiva son claves para el éxito de cualquier proyecto. Además, tengo una capacidad comprobada para identificar y resolver problemas de manera eficiente, asegurando que los objetivos se cumplan en tiempo y forma. Mi enfoque siempre está orientado a la mejora continua y la innovación, buscando siempre las mejores soluciones para cada desafío que se presenta</p> 
+      </section>
+      <h3 class="mt-32 flex "><Code class=" mr-2" /> Proyects</h3>
+      <ProyectCard class="my-4" image="../images/movies.wepb" name="the thingy with da stuff" description="it did something" link="https://github.com/yeisonbetancur"></ProyectCard>
     </section>
   </main>
 </Layout>
