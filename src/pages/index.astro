@@ -1,28 +1,45 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Badge from '../components/Badge.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import Github from "../components/icons/Github.astro";
+import Linkedin from "../components/icons/Linkedin.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Mail from '../components/icons/Mail.astro'
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<section class="w-full mx-auto lg:w-[740] py-44 text-white">
-			<h1 class=" text-5xl font-bold flex justify-center flex-row gap-x-4 pb-4">
-				hey, soy yeison 
-				<div class="flex justify-center items-center">
+<Layout title="Portafolio de Yeison - Programador y Desarrollador fullstack">
+  <main>
+    <section class="w-90 mx-auto lg:w-[740px] sm:w-[400px] py-44 text-white opacity-90">
+      <h1 class="text-5xl font-bold flex justify-center flex-row gap-x-4 pb-4">
+        hey, soy yeison
+        <div class="flex justify-center items-center">
+          <Badge>disponible</Badge>
+        </div>
+      </h1>
+      <h2 class="text-2xl">
+        <span class="text-blue-200/90">Desarrollador Fullstack</span> y Estudiante
+        de Ingenieria, de
+        <span class="text-yellow-100/90">Colombia.</span>
+        Especializado en crear aplicaciones ideales
+      </h2>
 
-						<Badge>disponible</Badge>
-
-				</div>
-				</h1>
-			<h2 class="text-2xl flex justify-center opacity-80">
-				Desarrollador Fullstack y Estudiante de Ingenieria. De
-				Colombia, 
-			</h2>
-		</section>
-	</main>
+      <ul class="flex gap-x-2 flex-col w-80 md:w-auto md:flex-row">
+        <SocialPill>
+          <a target="_blank" href="https://github.com/yeisonbetancur"
+            ><Github class="w-6 h-6 inline" /> Github</a>
+        </SocialPill>
+        <SocialPill>
+          <a target="_blank" href="https://linkedin.com/in/yeison-betancur">
+			<Linkedin class="w-6 h-6 inline" /> LinkedIn</a>
+        </SocialPill>
+        <SocialPill>
+          <a target="_blank" href=mailto:"yeisonbetancur01234@gmail.com">
+			<Mail class="w-6 h-6 inline" /> yeisonbetancur01234@gmail.com</a>
+        </SocialPill>
+      </ul>
+    </section>
+  </main>
 </Layout>
 
-<style>
-
-</style>
+<style></style>
